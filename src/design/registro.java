@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package design;
 
-/**
- *
- * @author USER
- */
+
 public class registro extends javax.swing.JFrame {
 
     /**
@@ -36,13 +29,13 @@ public class registro extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jComboBox4 = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
@@ -91,10 +84,13 @@ public class registro extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jTextField23 = new javax.swing.JTextField();
         jComboBox2 = new javax.swing.JComboBox<>();
+        jButton4 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jComboBox3 = new javax.swing.JComboBox<>();
         jTable1 = new javax.swing.JTable();
         jPanel4 = new javax.swing.JPanel();
 
@@ -116,21 +112,17 @@ public class registro extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("CÓDIGO:");
         jLabel2.setOpaque(true);
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 87, 70, 20));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 70, 30));
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("<html>Indicaciones: Ingrese la información <p>"
             + "requerida, las celdas de color <style='color:rgb(255,0,0);'>celeste</p>"
             + "son de" +
-            "carácter <p style='color:rgb(255,0,0);'>obligatorio</p>, en que usted <p style='color:rgb(255,0,0);'>omita</p>" +
+            "carácter obliglatorio, en que usted omita" +
             "registrar dicha información,"
-            + "será <p style='color:rgb(255,0,0);'>descartado</p>" +
+            + "será descartado" +
             "del proceso de selección.<html>");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 80, 359, 157));
-
-        jTextField1.setBackground(new java.awt.Color(0, 204, 204));
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 84, 200, 30));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 359, 90));
 
         jLabel4.setBackground(new java.awt.Color(0, 204, 153));
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -143,7 +135,7 @@ public class registro extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 286, 647, 133));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 647, 133));
 
         jLabel5.setText("<html>(Resuma sus estudios, experiencias, competencias / habilidades, conocimiento de idiomas, <p>conocimientos informáticos y aspiraciones profesionales).<html>");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(239, 195, 418, 56));
@@ -155,17 +147,20 @@ public class registro extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 451, 200, 38));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 580, 200, 38));
 
         jButton2.setBackground(new java.awt.Color(255, 102, 102));
         jButton2.setText("ATRÁS");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(576, 451, 190, 38));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 580, 190, 38));
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "014AME", "014TOCV-1", "013ACRR", "013AIET", "013ACE", "013TOEP", "07ACAN", "07APBAN", "07AINFRA", "07ASOPBD", "07AGTI", "02AU" }));
+        jPanel1.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 100, 30));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 830, 540));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 700));
 
-        jLayeredPane1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 850, 700));
+        jLayeredPane1.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 700));
 
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -176,11 +171,17 @@ public class registro extends javax.swing.JFrame {
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 96, -1, -1));
 
         jLabel9.setText("Ap. Materno");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 58, -1, -1));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, -1, -1));
         jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 55, 205, -1));
-        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 93, 205, -1));
+        jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 205, -1));
         jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(411, 55, 260, -1));
-        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(94, 169, 176, -1));
+
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 176, -1));
         jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 131, 50, -1));
         jPanel2.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 70, -1));
 
@@ -191,26 +192,26 @@ public class registro extends javax.swing.JFrame {
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 172, -1, -1));
 
         jLabel12.setText("Fecha de nacimiento");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
+        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, 20));
 
         jLabel13.setText("Lugar de nacimiento");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, -1, -1));
-        jPanel2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(417, 131, 290, -1));
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 130, -1, 20));
+        jPanel2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, 290, -1));
 
         jLabel14.setText("Domicilio");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 203, -1, -1));
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
 
         jLabel15.setText("Provincia");
-        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 245, -1, -1));
+        jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 260, -1, -1));
 
         jLabel16.setText("Sexo");
-        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 172, -1, -1));
+        jPanel2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, -1, -1));
 
         jLabel17.setText("Teléfono contacto");
-        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(27, 284, -1, -1));
-        jPanel2.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(76, 200, 172, -1));
-        jPanel2.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 242, 80, -1));
-        jPanel2.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 281, 70, -1));
+        jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        jPanel2.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 360, -1));
+        jPanel2.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 80, -1));
+        jPanel2.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 70, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Femenino", "Masculino" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -218,51 +219,51 @@ public class registro extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(307, 169, 143, -1));
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 143, -1));
 
         jLabel18.setText("Estado civil");
         jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(495, 172, -1, -1));
 
         jLabel19.setText("Distrito");
-        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(159, 245, -1, -1));
-        jPanel2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(452, 242, 108, -1));
-        jPanel2.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 242, 170, -1));
+        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
+        jPanel2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 108, -1));
+        jPanel2.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 170, -1));
 
         jLabel20.setText("Ciudad");
-        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 245, -1, -1));
+        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, -1, -1));
 
         jLabel21.setText("País");
-        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(578, 245, -1, -1));
+        jPanel2.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 260, -1, -1));
 
         jLabel22.setText("Otro teléfono");
-        jPanel2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 284, -1, -1));
-        jPanel2.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(277, 281, 119, -1));
+        jPanel2.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, -1, -1));
+        jPanel2.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, 119, -1));
 
         jLabel23.setText("E-mail(solo uno)");
-        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 284, -1, -1));
-        jPanel2.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(498, 281, 230, -1));
+        jPanel2.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, -1, -1));
+        jPanel2.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 230, -1));
 
         jTextField17.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1), "DNI", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
-        jPanel2.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 130, -1));
+        jPanel2.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 350, 140, -1));
 
         jLabel24.setText("Documento de identidad");
-        jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
+        jPanel2.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
 
         jLabel25.setText("Brevete");
-        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, -1, -1));
-        jPanel2.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 350, 63, -1));
+        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 360, -1, -1));
+        jPanel2.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, 63, -1));
 
         jLabel26.setText("Categoria");
-        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 350, -1, -1));
-        jPanel2.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, 110, -1));
+        jPanel2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, -1, 20));
+        jPanel2.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 360, 110, -1));
 
         jLabel28.setText("S. Pensiones");
         jPanel2.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 413, -1, -1));
         jPanel2.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(98, 410, 143, -1));
 
         jLabel29.setText("N° CUSPP");
-        jPanel2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 413, -1, -1));
-        jPanel2.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 410, 190, -1));
+        jPanel2.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 410, -1, -1));
+        jPanel2.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 190, -1));
 
         jLabel30.setBackground(new java.awt.Color(0, 153, 153));
         jLabel30.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -277,11 +278,20 @@ public class registro extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 564, 208, 46));
-        jPanel2.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(608, 242, 128, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 208, 46));
+        jPanel2.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 260, 128, -1));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Soltero (a)", "Casado (a)" }));
         jPanel2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 169, 133, -1));
+
+        jButton4.setBackground(new java.awt.Color(255, 51, 51));
+        jButton4.setText("ANTERIOR");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 550, 240, 50));
 
         jLayeredPane1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, -6, 780, 710));
 
@@ -297,10 +307,38 @@ public class registro extends javax.swing.JFrame {
         jLabel32.setText("En caso que haya cursado en más de dos instituciones por nivel, empiece ubicando la última en la primera línea que corresponda");
         jPanel3.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 85, -1, -1));
 
+        jButton5.setBackground(new java.awt.Color(255, 51, 51));
+        jButton5.setText("ANTERIOR");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 200, 50));
+
+        jButton6.setBackground(new java.awt.Color(0, 204, 51));
+        jButton6.setText("SIGUIENTE");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, 210, 50));
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Belice", "Benín", "Bielorrusia", "Birmania", "Bolivia", "Bosnia y Herzegovina", "Botsuana", "Brasil", "Brunéi", "Bulgaria", "Burkina Faso", "Burundi", "Bután", "Cabo Verde", "Camboya", "Camerún", "Canadá", "Catar", "Chad", "Chile", "China", "Chipre", "Ciudad del Vaticano", "Colombia", "Comoras", "Corea del Norte", "Corea del Sur", "Costa de Marfil", "Costa Rica", "Croacia", "Cuba", "Dinamarca", "Dominica", "Ecuador", "Egipto", "El Salvador", "Emiratos Árabes Unidos", "Eritrea", "Eslovaquia", "Eslovenia", "España", "Estados Unidos", "Estonia", "Etiopía", "Filipinas", "Finlandia", "Fiyi", "Francia", "Gabón", "Gambia", "Georgia", "Ghana", "Granada", "Grecia", "Guatemala", "Guyana", "Guinea", "Guinea ecuatorial", "Guinea-Bisáu", "Haití", "Honduras", "Hungría", "India", "Indonesia", "Irak", "Irán", "Irlanda", "Islandia", "Islas Marshall", "Islas Salomón", "Israel", "Italia", "Jamaica", "Japón", "Jordania", "Kazajistán", "Kenia", "Kirguistán", "Kiribati", "Kuwait", "Laos", "Lesoto", "Letonia", "Líbano", "Liberia", "Libia", "Liechtenstein", "Lituania", "Luxemburgo", "Macedonia del Norte", "Madagascar", "Malasia", "Malaui", "Maldivas", "Malí", "Malta", "Marruecos", "Mauricio", "Mauritania", "México", "Micronesia", "Moldavia", "Mónaco", "Mongolia", "Montenegro", "Mozambique", "Namibia", "Nauru", "Nepal", "Nicaragua", "Níger", "Nigeria", "Noruega", "Nueva Zelanda", "Omán", "Países Bajos", "Pakistán", "Palaos", "Panamá", "Papúa Nueva Guinea", "Paraguay", "Perú", "Polonia", "Portugal", "Reino Unido", "República Centroafricana", "República Checa", "República del Congo", "República Democrática del Congo", "República Dominicana", "Ruanda", "Rumanía", "Rusia", "Samoa", "San Cristóbal y Nieves", "San Marino", "San Vicente y las Granadinas", "Santa Lucía", "Santo Tomé y Príncipe", "Senegal", "Serbia", "Seychelles", "Sierra Leona", "Singapur", "Siria", "Somalia", "Sri Lanka", "Suazilandia", "Sudáfrica", "Sudán", "Sudán del Sur", "Suecia", "Suiza", "Surinam", "Tailandia", "Tanzania", "Tayikistán", "Timor Oriental", "Togo", "Tonga", "Trinidad y Tobago", "Túnez", "Turkmenistán", "Turquía", "Tuvalu", "Ucrania", "Uganda", "Uruguay", "Uzbekistán", "Vanuatu", "Venezuela", "Vietnam", "Yemen", "Yibuti", "Zambia", "Zimbabue" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, 150, 20));
+
+        jTable1.setAutoCreateRowSorter(true);
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
-                {null, null, null, null, null},
+                {"", null, null, null, null},
+                {null, "", null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null}
             },
@@ -308,9 +346,7 @@ public class registro extends javax.swing.JFrame {
                 "NOMBRE DE LA INSTITUCIÓN", "PAIS", "AÑO INICIO", "AÑO TÉRMINO", "ORDEN "
             }
         ));
-        jScrollPane2.setViewportView(jTable1);
-
-        jPanel3.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(32, 168, 735, 91));
+        jPanel3.add(jTable1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 660, 210));
 
         jLayeredPane1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 1080, 700));
 
@@ -321,7 +357,7 @@ public class registro extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 850, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 876, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -347,6 +383,29 @@ public class registro extends javax.swing.JFrame {
         jPanel2.setVisible(false);
         this.jPanel3.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        jPanel2.setVisible(false);
+        this.jPanel1.setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+         jPanel2.setVisible(true);
+        this.jPanel3.setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+         jPanel3.setVisible(false);
+        this.jPanel4.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -388,8 +447,13 @@ public class registro extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -427,10 +491,8 @@ public class registro extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField13;

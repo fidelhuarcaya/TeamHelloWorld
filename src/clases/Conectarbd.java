@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class Conectarbd {
 
     Connection con = null;
-    String database = "";//nombre de la base datos
+    String database = "usuarios";//nombre de la base datos
     String url = "jdbc:mysql://localhost/" + database + "?serverTimezone=UTC";
 
 //nombre de usuario de la base datos
