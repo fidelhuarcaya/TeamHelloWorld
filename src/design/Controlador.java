@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -22,6 +23,7 @@ public class Controlador extends javax.swing.JFrame {
      */
     public Controlador() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -127,20 +129,19 @@ public class Controlador extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Conectarbd con=new Conectarbd();
-       
+       String sql ="SELECT dni, ap_paterno, ap_materno, nombre FROM postulante";
         try {
-             Connection c = con.Conectar();
-              ps =c.prepareStatement("SELECT * FROM postulante where dni=?");
-              ps.setString(1, dni.getText());
-              
-              rs=ps.executeQuery();
-              
-              if(rs.next()){
-                  ap_paterno.setText(rs.getString("ap_paterno"));
-                   ap_materno.setText(rs.getString(" ap_materno"));
-                  nombre.setText(rs.getString("nombre"));
-              }else{
-                  JOptionPane.showMessageDialog(null,"No existe postulante con la clave ");
+                
+        Connection c = con.Conectar();
+        Statement s = (Statement) c.createStatement();
+        ResultSet rs = s.executeQuery(sql);
+                    
+              while(rs.next()){if(dni.getText().equals(rs.getString(1))){
+                  dni.setText( rs.getString(1));
+                  ap_paterno.setText(rs.getString(2));
+                   ap_materno.setText(rs.getString(3));
+                  nombre.setText(rs.getString(4));
+              }
               }
               
         } catch (SQLException ex) {
@@ -151,15 +152,16 @@ public class Controlador extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Conectarbd con=new Conectarbd();
-        
+        String sql="UPDATE postulante "
+ + "SET dni="+dni.getText()+", ap_paterno='"+ap_paterno.getText()+"', ap_materno='"+ap_materno.getText()
+                +"', nombre='"+nombre.getText()+"' WHERE dni="+dni.getText();
+        System.out.println(sql);
         try {
+            
              Connection c = con.Conectar();
-              ps =c.prepareStatement("UPDATE postulante set dni=?,ap_paterno=?,ap_materno=?,nombre=? where dni=?");
-              
-                  ps.setString(2,ap_paterno.getText());
-                  ps.setString(3,ap_materno.getText());
-                  ps.setString(4,nombre.getText());
-                  ps.setString(5,dni.getText());
+  PreparedStatement ps =c.prepareStatement(sql);
+               
+               
                   
                   int res=ps.executeUpdate();
               
@@ -199,6 +201,7 @@ public class Controlador extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Controlador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */

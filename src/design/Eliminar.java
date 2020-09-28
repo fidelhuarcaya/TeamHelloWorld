@@ -13,6 +13,7 @@ public class Eliminar extends javax.swing.JFrame {
     
     public Eliminar() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -26,6 +27,7 @@ public class Eliminar extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setText("ELIMINAR POSTULANTE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -42,26 +44,26 @@ public class Eliminar extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(268, 268, 268)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(146, 146, 146)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(94, 94, 94)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(186, Short.MAX_VALUE))
+                .addGap(53, 53, 53)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(111, 111, 111)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(347, Short.MAX_VALUE))
         );
 
@@ -83,114 +85,114 @@ public class Eliminar extends javax.swing.JFrame {
          } catch (SQLException ex) {
             Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
         }          
-        //ELIMINACION TABLA AREA_INTERES
-        try {
-          Connection  c1 = con.Conectar();
-          String sql2="DELETE FROM AREA_INTERES WHERE POSTULANTE_DNI= ";  
-           ps =c1.prepareStatement(sql2);
-          ps.setString(1,dni);        
-        } catch (SQLException ex) {
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        }       
-        //ELIMINACION TABLA DETALLE_POSTULANTE_IDIOMA
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM DETALLE_POSTULANTE_IDIOMA WHERE DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,dni);        
-        } catch (SQLException ex) {
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        }  
-        //ELIMINACION TABLA DETALLE_POSTULANTE_SOFTWARE
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM DETALLE_POSTULANTE_SOFTWARE WHERE DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,txtId.getText());        
-        } catch (SQLException ex) {
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        } 
-        //ELIMINACION TABLA EDU_SUPERIOR
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM EDU_SUPERIOR WHERE DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,txtId.getText());        
-        } catch (SQLException ex) {
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //ELIMINACION TABLA EDUCACION
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM EDUCACION WHERE DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,txtId.getText());        
-        } catch (SQLException ex) {
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //ELIMINACION TABLA EDUCACION_BASICA
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM EDUCACION_BASICA WHERE DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,txtId.getText());        
-        } catch (SQLException ex) {
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //ELIMINACION TABLA EMPRESA
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM EDUCACION_BASICA WHERE DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,txtId.getText());        
-        }catch (SQLException ex){
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //ELIMINACION TABLA FAMILIAR
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM FAMILIAR WHERE DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,txtId.getText());        
-        }catch (SQLException ex){
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //ELIMINACION TABLA FUNCION_PUBLICA
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM FUNCION_PUBLICA WHERE DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,txtId.getText());        
-        }catch (SQLException ex){
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //ELIMINACION TABLA LUGAR_PREFERENCIA
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM LUGAR_PREFERENCIA WHERE POSTULANTE_DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,txtId.getText());        
-        }catch (SQLException ex){
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //ELIMINACION TABLA PREGUNTA
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM PREGUNTA WHERE POSTULANTE_DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,txtId.getText());        
-        }catch (SQLException ex){
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        //ELIMINACION TABLA REFERENCIA_LABORAL
-        try {
-          Connection  c3 = con.Conectar();
-          String sql2="DELETE FROM REFERENCIA_LABORAL WHERE POSTULANTE_DNI= ";  
-           ps =c3.prepareStatement(sql2);
-          ps.setString(1,txtId.getText());        
-        }catch (SQLException ex){
-            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+//        //ELIMINACION TABLA AREA_INTERES
+//        try {
+//          Connection  c1 = con.Conectar();
+//          String sql2="DELETE FROM AREA_INTERES WHERE POSTULANTE_DNI= ";  
+//           ps =c1.prepareStatement(sql2);
+//          ps.setString(1,dni);        
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        }       
+//        //ELIMINACION TABLA DETALLE_POSTULANTE_IDIOMA
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM DETALLE_POSTULANTE_IDIOMA WHERE DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,dni);        
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        }  
+//        //ELIMINACION TABLA DETALLE_POSTULANTE_SOFTWARE
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM DETALLE_POSTULANTE_SOFTWARE WHERE DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,txtId.getText());        
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        } 
+//        //ELIMINACION TABLA EDU_SUPERIOR
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM EDU_SUPERIOR WHERE DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,txtId.getText());        
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        //ELIMINACION TABLA EDUCACION
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM EDUCACION WHERE DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,txtId.getText());        
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        //ELIMINACION TABLA EDUCACION_BASICA
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM EDUCACION_BASICA WHERE DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,txtId.getText());        
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        //ELIMINACION TABLA EMPRESA
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM EDUCACION_BASICA WHERE DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,txtId.getText());        
+//        }catch (SQLException ex){
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        //ELIMINACION TABLA FAMILIAR
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM FAMILIAR WHERE DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,txtId.getText());        
+//        }catch (SQLException ex){
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        //ELIMINACION TABLA FUNCION_PUBLICA
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM FUNCION_PUBLICA WHERE DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,txtId.getText());        
+//        }catch (SQLException ex){
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        //ELIMINACION TABLA LUGAR_PREFERENCIA
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM LUGAR_PREFERENCIA WHERE POSTULANTE_DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,txtId.getText());        
+//        }catch (SQLException ex){
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        //ELIMINACION TABLA PREGUNTA
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM PREGUNTA WHERE POSTULANTE_DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,txtId.getText());        
+//        }catch (SQLException ex){
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        //ELIMINACION TABLA REFERENCIA_LABORAL
+//        try {
+//          Connection  c3 = con.Conectar();
+//          String sql2="DELETE FROM REFERENCIA_LABORAL WHERE POSTULANTE_DNI= ";  
+//           ps =c3.prepareStatement(sql2);
+//          ps.setString(1,txtId.getText());        
+//        }catch (SQLException ex){
+//            Logger.getLogger(Eliminar.class.getName()).log(Level.SEVERE, null, ex);
+//        } 
         //CONFIRMACION DE USUARIO ELIMINADO        
         try {
             int res = ps.executeUpdate();
@@ -227,6 +229,7 @@ public class Eliminar extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Eliminar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
